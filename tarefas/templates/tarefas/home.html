@@ -1,0 +1,35 @@
+{% extends 'tarefas/base.html' %}
+
+{% block titulo %}Home{% endblock %}
+
+{% block corpo %}
+
+<div class="progress-container">
+    <label>Progresso</label>
+    <div class="progress-bar">
+        <div class="progress" style="width: 20%;"></div>
+    </div>
+    <div class="progress-count">1/5</div>
+</div>
+
+<form class="task-form" method="POST">
+    <input name="label" type="text" placeholder="$ adicionar nova tarefa..." required autofocus />
+    <button type="submit">ADD</button>
+</form>
+
+<ul class="task-list">
+    
+    <li class="completed">
+        <form method="POST">
+            
+            <input type="checkbox" onChange="this.form.submit()"/>
+        </form>
+        <span>Assistir 30 min de aula</span>
+        <a href="" class="delete">×</a>
+    </li>
+    
+</ul>
+<p class="footer">faltam 4 tarefas • Bora codar!</p>
+
+
+{% endblock %}

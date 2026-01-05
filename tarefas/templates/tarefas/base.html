@@ -1,0 +1,24 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <title>{% block titulo%}Titulo Padrão{% endblock %}</title>
+</head>
+<body>
+    <div class="container">
+        <h1 class="title">~/<span class="highlight">minhas-tarefas</span></h1>
+        <p class="date">a minha lista de tarefas..</p>
+
+    </div>
+
+    {% block corpo %}
+
+
+
+    {% endblock %}
+</body>
+</html>
