@@ -1,4 +1,4 @@
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, get_object_or_404
 from .models import Tarefas
 from .forms import TarefasForm
 
@@ -41,4 +41,23 @@ def add(request):
     
     if form.is_valid():
         form.save()
+    return redirect('home')
+
+
+def toggle(request, id):
+
+    task = get_object_or_404(Tarefas, id=id)
+
+    if task.feita == True:
+        task.feita = False
+    else:
+        task.feita = True
+    
+    task.save()
+    
+    return redirect('home')
+
+def delete(request, id):
+    task = get_object_or_404(Tarefas, id=id)
+    task.delete()
     return redirect('home')
