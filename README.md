@@ -15,16 +15,47 @@ Projeto de uma aplicação **To-Do List** desenvolvida com **Django**, onde o us
 
 ## 🛠️ Tecnologias Utilizadas
 
-- Python 3
-- Django
+- Python 3.12.3
+- Django 6.0.6
 - SQLite (banco de dados padrão do Django)
 - HTML / CSS (templates)
 
 ---
 
-## 📂 Estrutura do Projeto (resumida)
+## 📂 Estrutura do Projeto
 
+```bash
 
+project-to-do-list/
+├── core/                      # Configurações principais do projeto Django
+│   ├── asgi.py                # Configuração ASGI
+│   ├── settings.py            # Configurações da aplicação
+│   ├── urls.py                # Rotas globais do projeto
+│   └── wsgi.py                # Configuração WSGI
+│
+├── tarefas/                   # Aplicação responsável pelo gerenciamento de tarefas
+│   ├── migrations/            # Histórico de migrações do banco de dados
+│   ├── static/
+│   │   └── css/
+│   │       └── style.css      # Estilos da aplicação
+│   ├── templates/
+│   │   ├── 404.html           # Página personalizada de erro
+│   │   └── tarefas/
+│   │       ├── base.html      # Template base
+│   │       └── home.html      # Página principal
+│   ├── admin.py               # Configurações do painel administrativo
+│   ├── apps.py                # Configuração da aplicação
+│   ├── forms.py               # Formulários Django
+│   ├── models.py              # Modelos do banco de dados
+│   ├── tests.py               # Testes automatizados
+│   ├── urls.py                # Rotas da aplicação
+│   └── views.py               # Lógica das views
+│
+├── db.sqlite3                 # Banco de dados SQLite
+├── manage.py                  # Utilitário de gerenciamento Django
+└── README.md                  # Documentação do projeto
+
+```
 
 ## ⚙️ Como rodar o projeto localmente
 
