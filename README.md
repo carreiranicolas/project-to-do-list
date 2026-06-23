@@ -91,3 +91,10 @@ python manage.py migrate
 python manage.py runserver
 ```
 
+---
+
+## ⌨️ Navegação 
+
+![Demonstração do Projeto](navegacao.gif)
+
+ 
